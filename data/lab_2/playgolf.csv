@@ -1,0 +1,15 @@
+Outlook,Temp,Humidity,Windy,PlayGolf
+sunny,1,1,0,0
+sunny,1,1,1,0
+overcast,1,1,0,1
+rain,0,1,0,1
+rain,0,1,0,1
+rain,0,0,1,0
+overcast,0,0,1,1
+sunny,0,1,0,0
+sunny,0,0,0,1
+rain,0,1,0,1
+sunny,0,0,1,1
+overcast,0,1,1,1
+overcast,1,0,0,1
+rain,0,1,1,0
