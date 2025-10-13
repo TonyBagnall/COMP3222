@@ -3,35 +3,17 @@ from sklearn.tree import DecisionTreeClassifier
 import matplotlib.pyplot as plt
 from sklearn import tree
 import numpy as np
+from sklearn.tree import _tree
+from sklearn.datasets import load_iris
 
 
 def load_data(split="train"):
     X, y = load_italy_power_demand(return_type="numpy2D")
-    # X, y = load_from_ts_file("../../data/lab_2/gunpoint_TRAIN",
-    #                          return_type="numpy2D")
     y = y.astype(np.int64)
     print(y)
     y = y-1
     return X, y
 
-
-def plot_tree(dt):
-    class_names =["Normal", "Anomaly"]
-    feature_names = [f"t{i}" for i in range(1, 24)]
-    # Plot
-    plt.figure(figsize=(10, 6))
-    tree.plot_tree(
-        dt,
-        feature_names=feature_names,
-        class_names=class_names,
-        filled=True,
-        rounded=True,
-    )
-    plt.tight_layout()
-    plt.show()
-
-
-from sklearn.tree import _tree
 
 def plot_tree_2d(
     clf,
@@ -183,15 +165,7 @@ if __name__ == "__main__":    # Example usage
     print("Unique = ", set(y))
     dt = DecisionTreeClassifier()
     dt.fit(X, y)
-    plot_tree(dt)
-    from sklearn.datasets import load_iris
-    from sklearn.tree import DecisionTreeClassifier
     iris = load_iris(as_frame=True)
     X_iris = iris.data[["petal length (cm)", "petal width (cm)"]].values
     y_iris = iris.target
-    tree_clf = DecisionTreeClassifier(max_depth=2, random_state=0)
-    tree_clf.fit(X_iris, y_iris)
-    print(y_iris)
-    a=plot_tree_2d(tree_clf,X_iris, y_iris)
-
 
