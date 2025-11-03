@@ -176,7 +176,7 @@ if __name__ == "__main__":    # Example usage
     counts = np.array([5, 3, 2])
     impurity = gini_impurity_numba(counts)
     # print(f"Gini Impurity: {impurity}")
-    data = pd.read_csv('../../data/lab_2/playgolf.csv')
+    data = pd.read_csv('../../data/lab2/playgolf.csv')
     print(data)
     y = data.iloc[:, 4].to_numpy()
     print(y)
