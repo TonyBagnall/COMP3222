@@ -190,7 +190,7 @@ class FrequencyEncoderTransformer(BaseEstimator, TransformerMixin):
 
 
 if __name__ == "__main__":
-    X, y = load_credit_approval_data("../../data/lab_3/credit_approval.csv")
+    X, y = load_credit_approval_data("../../data/lab3/credit_approval.csv")
     print(X.shape, y.shape)
     print("Unique target values:", set(y))
     print(X[0])
